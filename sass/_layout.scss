@@ -1,0 +1,43 @@
+.header {
+  // padding: 2rem;
+  min-height: 100vh;
+  position: relative;
+
+  &__content {
+    display: block;
+    height: 90vh;
+    opacity: 0.8;
+    background-image: url("/img/img4.jpg");
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 90%);
+
+    // & > img {
+    //   width: 100%;
+    //   height: 100%;
+    // }
+  }
+}
+
+.section {
+  padding: 2rem;
+  min-height: 40rem;
+
+  &__break {
+    position: relative;
+    display: block;
+    min-height: 30rem;
+
+    &--rose {
+      background-color: var(--color-old-rose);
+    }
+
+    &--apricot {
+      background-color: #f2b880;
+    }
+
+    &--lilac {
+      background-color: #966b9d;
+    }
+  }
+}

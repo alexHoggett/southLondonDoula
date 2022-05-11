@@ -1,0 +1,150 @@
+.navbar {
+  display: flex;
+  height: 8vh;
+  font-size: 1.6rem;
+  padding: 2rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    justify-content: space-between;
+  }
+
+  &__burger {
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border-radius: 4px;
+    z-index: 12;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: inline-block;
+    }
+
+    &-icon {
+      @include burger(30px, 3px, 6px, var(--color-raisin-black));
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: (-50%, -50%);
+      margin-left: -15px;
+      margin-top: -1.5px;
+    }
+
+    &--active {
+      div {
+        @include burger-to-cross;
+        &:before,
+        &:after {
+          background-color: var(--color-seashell);
+        }
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__logo {
+    // background-color: var(--color-primary);
+    position: relative;
+    z-index: 20;
+    &-img {
+      width: 14rem;
+      height: 100%;
+    }
+  }
+
+  &__list {
+    flex: 1;
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-right: 6rem;
+    @include transition(all 0.3s);
+
+    @media only screen and (max-width: $bp-large) {
+      margin-right: 0rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      // turn into sliding burger nav
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 12;
+    }
+
+    &--active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__item {
+    padding: 1rem;
+    margin: auto 2rem;
+
+    @media only screen and (max-width: $bp-large) {
+      margin: auto 1rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      margin: 5rem 1rem;
+      font-size: 3rem;
+      z-index: 10;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-large) {
+      & > a {
+        padding: 1rem 1.5rem !important;
+      }
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      & > a {
+        padding: 1.5rem 4rem !important;
+      }
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-french-lilac);
+    z-index: -10;
+    opacity: 0;
+    @include transition(all 0.3s ease-in-out);
+    visibility: hidden;
+
+    @media only screen and (min-width: $bp-medium) {
+      @include transition(all 0s);
+    }
+
+    &--active {
+      z-index: 10;
+      opacity: 1;
+      visibility: visible;
+
+      @media only screen and (min-width: $bp-medium) {
+        visibility: hidden;
+      }
+    }
+  }
+}

@@ -3,6 +3,11 @@
   height: 8vh;
   font-size: 1.6rem;
   padding: 2rem;
+  position: fixed;
+  background-color: var(--color-seashell);
+  width: 100%;
+  transition: all 0.4s;
+  z-index: 100;
 
   @media only screen and (max-width: $bp-medium) {
     justify-content: space-between;

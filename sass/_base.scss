@@ -7,6 +7,7 @@ $bp-small: 37.5em; // 600px
 :root {
   --color-french-lilac: #966b9d;
   --color-old-rose: #c98686;
+  --color-old-rose-rgb: 201, 134, 134;
   --color-mellow-apricot: #f2b880;
   --color-seashell: #fff4ec;
   --color-champagne: #e7cfbc;
@@ -34,4 +35,9 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   background-color: var(--color-seashell);
+  color: var(--color-raisin-black);
+}
+
+main{
+  padding-top: 10rem;
 }

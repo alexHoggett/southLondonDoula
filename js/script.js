@@ -15,7 +15,6 @@ burger.addEventListener('click', (e) => {
 // implementing navbar hiding on scroll down
 let lastScrollTop;
 window.addEventListener('scroll', function(){
-  console.log('running');
   let scrollTop = window.pageYOffset ||
   this.document.documentElement.scrollTop;
   if (scrollTop > lastScrollTop){

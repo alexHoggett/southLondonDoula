@@ -102,15 +102,18 @@
 }
 
 .background{
-  
+  white-space: pre-wrap;
 
   &--white{
     background-color: white;
-    white-space: pre-wrap;
+  }
+
+  &--seashell{
+    background-color: var(--color-seashell);
+    color: var(--color-raisin-black);
   }
 
   &--apricot{
-    white-space: pre-wrap;
     background-color: var(--color-mellow-apricot);
   }
 }
@@ -118,6 +121,10 @@
 .padding{
   &--small{
     padding: 3rem;
+  }
+
+  &--medium{
+    padding: 6rem;
   }
 }
 
@@ -129,6 +136,11 @@
   &--large{
     margin-left: 10rem !important;
     margin-right: 10rem !important;
+
+    @media only screen and (max-width: 500px){
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
   }
 }
 
@@ -169,4 +181,26 @@
       background-color: var(--color-old-rose);
     }
   }
+}
+
+.container{
+  &__pd--4{
+    padding: 4rem;
+  }
+
+  &__pd--2{
+    padding: 2rem;
+  }
+
+  &__pd--6{
+    padding: 6rem;
+  }
+}
+
+.topnav-space{
+  padding-top: 8rem;
+}
+
+.flex-start{
+  align-items: flex-start !important;
 }

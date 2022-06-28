@@ -19,6 +19,14 @@ $bp-small: 37.5em; // 600px
   scroll-behavior: smooth;
 }
 
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-850: 53.125em; // 850px
+$bp-medium: 50em; // 800px
+$bp-700: 43.75em; // 700px
+$bp-small: 37.5em; // 600px
+
 *,
 *::after,
 *::before {
@@ -30,7 +38,10 @@ $bp-small: 37.5em; // 600px
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  // padding: 2rem;
+  
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -38,10 +49,11 @@ body {
   font-weight: 400;
   background-color: var(--color-seashell);
   color: var(--color-raisin-black);
+  position: relative;
 }
 
 main{
-  padding-top: 10rem;
+  z-index: 10;
 }
 
 p, li{

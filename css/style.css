@@ -20,15 +20,19 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 50em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   background-color: var(--color-seashell);
-  color: var(--color-raisin-black); }
+  color: var(--color-raisin-black);
+  position: relative; }
 
 main {
-  padding-top: 10rem; }
+  z-index: 10; }
 
 p, li {
   font-size: 1.6rem;
@@ -117,16 +121,21 @@ a {
 .center-text {
   text-align: center; }
 
-.background--white {
-  background-color: white;
+.background {
   white-space: pre-wrap; }
-
-.background--apricot {
-  white-space: pre-wrap;
-  background-color: var(--color-mellow-apricot); }
+  .background--white {
+    background-color: white; }
+  .background--seashell {
+    background-color: var(--color-seashell);
+    color: var(--color-raisin-black); }
+  .background--apricot {
+    background-color: var(--color-mellow-apricot); }
 
 .padding--small {
   padding: 3rem; }
+
+.padding--medium {
+  padding: 6rem; }
 
 .margin__side--medium {
   margin-left: 5rem !important;
@@ -135,6 +144,10 @@ a {
 .margin__side--large {
   margin-left: 10rem !important;
   margin-right: 10rem !important; }
+  @media only screen and (max-width: 500px) {
+    .margin__side--large {
+      margin-left: 0 !important;
+      margin-right: 0 !important; } }
 
 .underline {
   position: relative;
@@ -157,17 +170,67 @@ a {
   .underline--rose::after {
     background-color: var(--color-old-rose); }
 
+.container__pd--4 {
+  padding: 4rem; }
+
+.container__pd--2 {
+  padding: 2rem; }
+
+.container__pd--6 {
+  padding: 6rem; }
+
+.topnav-space {
+  padding-top: 8rem; }
+
+.flex-start {
+  align-items: flex-start !important; }
+
 .header {
   min-height: 100vh;
   position: relative; }
+  .header__title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    max-width: 70rem;
+    margin: 4rem;
+    transform: translateY(-50%); }
+    .header__title p {
+      font-size: 3.5rem; }
+      .header__title p:not(:last-child) {
+        margin-bottom: 2rem; }
   .header__content {
+    position: relative;
     display: block;
     height: 90vh;
-    opacity: 0.8;
-    background-image: url("/img/img4.jpg");
-    background-size: cover;
-    background-position: top;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 90%); }
+    padding-top: 8rem; }
+    .header__content::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url("/img/img4.jpg");
+      background-size: cover;
+      background-position: top;
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 90%);
+      z-index: -1;
+      opacity: 0.8; }
+
+.site-intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 3rem; }
+  .site-intro__text {
+    width: 50rem;
+    margin-right: 9rem; }
+    .site-intro__text > p {
+      font-size: 2rem; }
+  .site-intro__heading {
+    font-weight: 300;
+    font-size: 4rem;
+    transform: translateY(-3rem); }
 
 .page-intro {
   padding: 4rem; }
@@ -191,6 +254,9 @@ a {
 
 .img--large {
   width: 80vw; }
+
+.img--round {
+  border-radius: 50%; }
 
 .sub-menu {
   padding: 3rem 0;
@@ -224,6 +290,15 @@ a {
   .section--2-cols {
     display: flex;
     flex-direction: row;
+    align-items: center; }
+    @media only screen and (max-width: 600px) {
+      .section--2-cols {
+        flex-direction: column; }
+        .section--2-cols img {
+          width: 80% !important; } }
+  .section__column__container {
+    display: flex;
+    justify-content: center;
     align-items: center; }
   .section--1-col {
     display: flex;
@@ -272,6 +347,9 @@ a {
       background-color: var(--color-mellow-apricot); }
   .section--padding-large {
     padding: 5rem 15rem; }
+    @media only screen and (max-width: 600px) {
+      .section--padding-large {
+        padding: 2rem 5rem; } }
   .section__break {
     position: relative;
     display: block;
@@ -289,6 +367,18 @@ a {
       background-size: cover;
       background-position: center;
       opacity: 0.6; }
+    .section__break--img-2 {
+      position: relative; }
+      .section__break--img-2::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("../img/img3.jpg");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.8;
+        z-index: -10; }
     .section__break__quote {
       position: absolute;
       top: 50%;
@@ -299,9 +389,39 @@ a {
       transform: translate(-50%, -50%);
       width: 80vw;
       padding: 2rem; }
+    .section__break--2-cols {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center; }
+      @media only screen and (max-width: 50em) {
+        .section__break--2-cols {
+          flex-direction: column;
+          align-items: center; }
+          .section__break--2-cols img {
+            width: 100% !important; } }
+  .section__img__container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .section__img__container img {
+      width: 35vw; }
+  .section__text__container {
+    flex: 1; }
+    .section__text__container > .sub-heading {
+      margin-top: 0 !important;
+      margin-bottom: 1rem !important;
+      font-size: 6rem;
+      font-weight: 600; }
+    .section__text__container > p {
+      padding: 0 3rem 3rem 3rem;
+      font-size: 2.3rem;
+      font-weight: 200; }
 
 .styled-pair {
-  position: relative; }
+  position: relative;
+  margin-bottom: 6rem; }
   .styled-pair__text {
     position: absolute;
     top: 50%;
@@ -503,6 +623,25 @@ a {
   .bonus > h4 {
     text-align: center;
     font-size: 2.6rem; }
+
+.list__2-cols {
+  columns: 2;
+  column-gap: 6rem;
+  padding: 4rem; }
+  .list__2-cols > li {
+    break-inside: avoid-column; }
+    .list__2-cols > li:not(:last-child) {
+      margin-bottom: 1rem; }
+
+.faq__container {
+  padding: 3rem; }
+
+.faq__heading {
+  font-size: 2rem;
+  margin-bottom: 2rem; }
+
+.faq__answer:not(:last-child) {
+  margin-bottom: 4rem; }
 
 .btn {
   text-decoration: uppercase;

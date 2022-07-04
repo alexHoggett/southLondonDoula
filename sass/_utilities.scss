@@ -60,6 +60,10 @@
     color: var(--color-raisin-black);
     font-family: sans-serif;
     z-index: 1;
+
+    @media only screen and (max-width: 1200px){
+      // font-size: 3rem;
+    }
   }
 
   &::after {
@@ -72,14 +76,24 @@
     color: var(--color-raisin-black);
     font-family: sans-serif;
     z-index: 1;
+
+    
   }
 
   &--large{
     &::before{
       font-size: 12rem;
+
+      @media only screen and (max-width: 1200px){
+        font-size: 6rem;
+      }
     }
     &::after{
       font-size: 12rem;
+
+      @media only screen and (max-width: 1200px){
+        font-size: 6rem;
+      }
     }
   }
 }

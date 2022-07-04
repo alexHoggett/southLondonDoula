@@ -148,6 +148,12 @@
 .section {
   padding: 2rem;
   min-height: 40rem;
+  
+  & p {
+    &:not(:last-child){
+      margin-bottom: 2rem;
+    }
+  }
 
   &--large{
     height: 70vh;
@@ -199,6 +205,10 @@
   &__text--overlap{
     margin-right: -8rem !important;
     z-index: 10;
+
+    @media only screen and (max-width: 600px){
+      margin-right: 4rem !important;
+    }
   }
 
   &__text--column{
@@ -258,6 +268,12 @@
 
   }
 
+  &--center{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__break {
     position: relative;
     display: block;
@@ -302,15 +318,18 @@
     }
 
     &__quote{
-      position: absolute;
-      top: 50%;
-      left: 50%;
       font-size: 3rem;
       color: var(--color-mellow-apricot);
       font-weight: 500;
-      transform: translate(-50%, -50%);
       width: 80vw;
-      padding: 2rem
+      padding: 2rem;
+
+      @media only screen and (max-width: 1087px){
+        font-size: 2.5rem;
+        width: 85vw;
+        margin: 4rem;
+        padding: 0;
+      }
     }
 
     &--2-cols{
@@ -362,22 +381,39 @@
 
 .styled-pair{
   position: relative;
-  margin-bottom: 6rem;
+  margin-bottom: 10rem;
+  margin-top: 10rem;
+
+  @media only screen and (max-width: 1200px){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 4rem 5rem !important;
+  }
 
   &__text{
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    background-color: white;
+    // position: relative;
+    max-width: 40vw;
     padding: 3rem;
-    transform: translateY(-50%);
-    max-width: 50vw;
-    opacity: 1;
-    z-index: 10;
+    background-color: white;
+
+    @media only screen and (max-width: 1100px){
+      max-width: 50vw;
+    }
+
+    @media only screen and (max-width: 900px){
+      max-width: 100%;
+    }
 
     &--reverse{
-      left: auto;
-      right: 5%;
+      margin-left: auto;
+
+      @media only screen and (max-width: 1200px){
+        margin: auto;
+      }
     }
     
     &--rose{
@@ -398,16 +434,37 @@
   }
 
   &__img{
-    &__container{
-      display: flex;
-      justify-content: flex-end;
 
-      &--reverse{
-        justify-content: flex-start;
+    &__container{
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      z-index: -10;
+      transform: translateY(-50%);
+
+      @media only screen and (max-width: 1200px){
+        position: static;
+        z-index: 0;
+        transform: none;
+        margin-top: 3rem;
       }
 
       & > img{
-        max-width: 50vw;
+        max-width: 40vw;
+        
+        @media only screen and (max-width: 1500px){
+          max-width: 50vw;
+        }
+
+        @media only screen and (max-width: 1200px){
+          max-width: 100%;
+        }
+        
+      }
+
+      &--reverse{
+        left: auto;
+        right: 40%;
       }
     }
   }
@@ -520,8 +577,20 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     margin-bottom: 10rem;
+
+    @media only screen and (max-width: 700px){
+      flex-direction: column-reverse !important;
+      align-items: center;
+
+      & > .testimonial__text__container{
+        // 
+        margin: 2rem !important;
+        min-width: auto !important;
+        max-width: auto !important;
+        padding: 0 !important;
+      }
+    }
   }
 
   &__header{
@@ -535,33 +604,54 @@
   &__text__container{
     padding: 3rem;
     margin: 2rem;
+    min-width: 50rem;
+    max-width: 60vw;
   }
 
   &__quote{
     display: block;
-    min-width: 50rem;
+    // min-width: 50rem;
     font-size: 1.6rem;
+
+    @media only screen and (max-width: 540px){
+      min-width: 100%;
+    }
   }
 
   &__img{
-    max-width: 40rem;
-    z-index: -1;
+    max-width: 60rem;
     opacity: 0.6;
+
+    @media only screen and (max-width: 1000px){
+      max-width: 40vw;
+    }
+
+    @media only screen and (max-width: 700px){
+      max-width: 80vw;
+    }
+
+    &__container{
+      position: relative;
+      z-index: -10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &--text-left{
     flex-direction: row;
 
-    & > div{
-      margin-right: -12rem;
+    & > .testimonial__text__container{
+      margin-right: -16rem;
     }
   }
 
   &--text-right{
     flex-direction: row-reverse;
 
-    & > div{
-      margin-left: -12rem;
+    & > .testimonial__text__container{
+      margin-left: -16rem;
     }
   }
 }
@@ -569,6 +659,10 @@
 .list-columns{
   display: flex;
   flex-direction: row;
+
+  @media only screen and (max-width: 900px){
+    flex-direction: column;
+  }
 }
 
 .list-column{
@@ -576,6 +670,10 @@
   margin: 2rem;
   padding: 2rem;
   position: relative;
+
+  @media only screen and (max-width: 900px){
+    padding-bottom: 5rem;
+  }
 
   & li {
     &:not(:last-child){
@@ -593,6 +691,16 @@
       width: 2px;
       transform: translateY(-50%);
       background-color: var(--color-french-lilac);
+
+      @media only screen and (max-width: 900px){
+        right:auto;
+        bottom: 0;
+        left: 50%;
+        top: auto;
+        width: 80%;
+        height: 2px;
+        transform: translateX(-50%);
+      }
     }
     
   }
@@ -612,6 +720,22 @@
   justify-content: center;
   margin-bottom: 2rem;
 
+  @media only screen and (max-width: 660px){
+    flex-direction: column;
+    align-items: center;
+
+    & > &__list{
+      max-width: none !important;
+      padding: 2.5rem;
+    }
+
+    & > &__description{
+      max-width: none !important;
+      margin-right: 0 !important;
+      margin-bottom: 3rem;
+    }
+  }
+
   &__description{
     max-width: 40rem;
     margin-right: 5rem;
@@ -628,16 +752,20 @@
 }
 
 .benefits{
+
   &__list-container{
     display: flex;
     flex-direction: row;
     justify-content: center;
 
+    @media only screen and (max-width: 600px){
+      flex-direction: column;
+      align-items: center;
+    }
+
     & > div{
       max-width: 50rem;
     }
-
-    
   }
 
   & h4{
@@ -651,6 +779,15 @@
   &__list{
     &:not(:last-child){
       margin-right: 10rem;
+
+      @media only screen and (max-width: 600px){
+        margin-right: 0;
+      }
+    }
+    @media only screen and (max-width: 600px){
+      & li{
+        margin-bottom: 4px;
+      }
     }
   }
 }
@@ -664,12 +801,18 @@
   box-shadow: 2px 2px 4px var(--color-raisin-black);
 
   display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  @media only screen and (max-width: 658px){
+    width: 70vw;
+  }
+
   & > h4{
     text-align: center;
     font-size: 2.6rem;
+    margin-bottom: 2rem;
   }
 
   & ul{

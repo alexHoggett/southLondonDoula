@@ -86,6 +86,10 @@
   font-size: 6rem;
   padding: 4rem;
 
+  @media only screen and (max-width: 400px) {
+    font-size: 4rem;
+  }
+
   &--rose{
     background-color: var(--color-old-rose);
   }
@@ -118,6 +122,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-size: 2.5rem;
 
     & > p{
       margin-right: 4rem;
@@ -141,6 +146,31 @@
 
     &:not(:last-child){
       margin-right: 5rem;
+    }
+  }
+
+  @media only screen and (max-width: 510px){
+    &__item{
+      font-size: 1.8rem;
+    }
+
+    & > p{
+      font-size: 1.8rem;
+    }
+  }
+
+  @media only screen and (max-width: 412px){
+    &__list{
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__item{
+      margin-right: 0 !important;
+    }
+
+    & p {
+      margin-right: 0 !important;
     }
   }
 }
@@ -415,7 +445,13 @@
         margin: auto;
       }
     }
-    
+
+    @media only screen and (max-width: 350px){
+      & > h2{
+        font-size: 3rem !important;
+      }
+    }
+
     &--rose{
       border: 3px solid var(--color-old-rose);
     }

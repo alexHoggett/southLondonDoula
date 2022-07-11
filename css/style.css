@@ -1,4 +1,12 @@
 :root {
+  --color1: #099;
+  --color2: #e1ffc1;
+  --color3: #f8eefd;
+  --color4: #fff2f5;
+  --color5: #f4feff;
+  --color6: #5cb000;
+  --color7: #a715b7;
+  --color8: #dc0cb3;
   --color-french-lilac: #966b9d;
   --color-old-rose: #c98686;
   --color-old-rose-rgb: 201, 134, 134;
@@ -526,8 +534,7 @@ a {
 .contact__text p {
   font-size: 2.0rem;
   margin-bottom: 1rem;
-  padding: 3rem;
-  width: 80rem; }
+  padding: 3rem; }
 
 .contact-form input, .contact-form textarea {
   font-size: 1.8rem;
@@ -873,10 +880,15 @@ a {
       cursor: pointer; }
   .navbar__logo {
     position: relative;
-    z-index: 20; }
+    z-index: 20;
+    width: 20rem;
+    height: 100%; }
     .navbar__logo-img {
-      width: 14rem;
-      height: 100%; }
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 7rem; }
   .navbar__list {
     flex: 1;
     list-style: none;

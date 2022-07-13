@@ -11,3 +11,6 @@
 @import "components/navbar";
 @import "components/footer";
 @import "components/packages";
+@import "components/carousel";
+
+@include carousel(4);

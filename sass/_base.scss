@@ -6,25 +6,24 @@ $bp-small: 37.5em; // 600px
 
 :root {
   // robyn's colours
-  --color1: #099;
-  --color2: #e1ffc1;
-  --color3: #f8eefd;
+  --color1: #69dfdf;
+  --color2: #d3ffa5;
+  --color3: #eac6fc;
   --color4: #fff2f5;
   --color5: #f4feff;
-  --color6: #5cb000;
   --color7: #a715b7;
   --color8: #dc0cb3;
   
-  --color-french-lilac: #966b9d;
-  --color-old-rose: #c98686;
-  --color-old-rose-rgb: 201, 134, 134;
-  --color-mellow-apricot: #f2b880;
+  --color-french-lilac: #eac6fc;
+  --color-old-rose: #d3ffa5;
+  --color-old-rose-rgb: 225, 255, 193;
+  --color-mellow-apricot: #FF9AA2;
+
   --color-seashell: #fff4ec;
-  --color-champagne: #e7cfbc;
   --color-raisin-black: #2e282a;
   --color-white: #f2f4f3;
 
-  --color-primary: #f2b880;
+  --color-primary: #00b5da;
 
   
 
@@ -58,7 +57,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: 400;
   background-color: var(--color-seashell);
   color: var(--color-raisin-black);
@@ -70,11 +69,11 @@ main{
 }
 
 p, li{
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.8;
 }
 
 a{
-  color: var(--color-mellow-apricot);
+  color: var(--color-primary);
   text-decoration: none;
 }

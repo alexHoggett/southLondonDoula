@@ -11,11 +11,12 @@
     margin: 4rem;
     transform: translateY(-50%);
 
-    
-    
-
     & p{
       font-size: 3.5rem;
+
+      @media only screen and (max-width: 285px){
+        font-size: 2rem;
+      }
 
       &:not(:last-child){
         margin-bottom: 2rem;
@@ -136,6 +137,10 @@
     font-weight: 400;
     transition: all 0.3s;
 
+    & a {
+      color: var(--color-primary);
+    }
+
     &:hover{
       transform: translateY(-5px);
 
@@ -194,12 +199,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 
     @media only screen and (max-width: 600px) {
       flex-direction: column;
 
       & img{
-        width: 80% !important;
+        width: 80%;
       }
     }
   }
@@ -311,14 +317,18 @@
 
     &--rose {
       background-color: var(--color-old-rose);
+      
+      & p{
+        color: var(--color-raisin-black) !important;
+      }
     }
 
     &--apricot {
-      background-color: #f2b880;
+      background-color: var(--color-mellow-apricot);
     }
 
     &--lilac {
-      background-color: #966b9d;
+      background-color: var(--color-french-lilac);
     }
 
     &--small{
@@ -404,6 +414,10 @@
       font-size: 2.3rem;
       font-weight: 200;
     }
+  }
+
+  @media only screen and (max-width: 400px){
+    padding-top: 9rem;
   }
 }
 
@@ -527,12 +541,12 @@
   &-form{
 
     & input, & textarea{
-      font-size: 1.8rem;
+      font-size: 2.2rem;
       border: 0;
       outline: 0;
       padding: 1rem;
       border-radius: 4px;
-      width: 100%;
+      max-width: 100%;
       box-shadow: 0 1px 1px rgba(black, 0.1);
       resize: none;
       font-family: inherit;
@@ -573,6 +587,7 @@
       justify-content: center;
       align-items: flex-start;
       position: relative;
+     width: 90rem;
 
       @media only screen and (max-width: $bp-medium) {
         flex-direction: column;
@@ -646,8 +661,7 @@
 
   &__quote{
     display: block;
-    // min-width: 50rem;
-    font-size: 1.6rem;
+    font-size: 1.9rem;
 
     @media only screen and (max-width: 540px){
       min-width: 100%;
@@ -887,6 +901,49 @@
   &__answer{
     &:not(:last-child){
       margin-bottom: 4rem;
+    }
+  }
+}
+
+.carousel{
+
+  &__quote{
+    // paddings: 0 8rem;
+    font-style: italic;
+    position: relative;
+    
+    @media only screen and (max-width: 400px){
+      font-size: 1.6rem;
+    }
+    @media only screen and (max-width: 300px){
+      font-size: 1.3rem;
+    }
+
+
+
+    &::before {
+      content: "\201C";
+      position: absolute;
+      top: -0.3rem;
+      left: -3rem;
+      line-height: 1;
+      font-size: 5rem;
+      color: var(--color-raisin-black);
+      font-family: sans-serif;
+      z-index: 100;
+  
+    }
+  
+    &::after {
+      content: "\201D";
+      position: absolute;
+      top: -0.3rem;
+      right: -2rem;
+      line-height: 1;
+      font-size: 5rem;
+      color: var(--color-raisin-black);
+      font-family: sans-serif;
+      z-index: 100;
     }
   }
 }

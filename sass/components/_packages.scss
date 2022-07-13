@@ -40,12 +40,12 @@
     display: flex;
     justify-content: center;
     font-size: 2rem;
-    color: var(--color-white);
+    color: var(--color-primary);
   }
 
   &__price{
     position: relative;
-    color: var(--color-white);
+    color: var(--color-primary);
     font-weight: 700;
     display: inline-block;
     font-size: 3rem;
@@ -64,7 +64,7 @@
       left: -5px;
       top: 50%;
       height: 1px;
-      background-color: var(--color-white);
+      background-color: var(--color-primary);
       width: 70%;
       transform: translate(-100%, -50%);
     }
@@ -76,7 +76,7 @@
       top: 50%;
       height: 1px;
       transform: translate(100%, -50%);
-      background-color: var(--color-white);
+      background-color: var(--color-primary);
       width: 70%;
     }
   }

@@ -4,6 +4,7 @@ const burger = document.querySelector('.navbar__burger');
 const overlay = document.querySelector('.navbar__overlay')
 const navlist = document.querySelector('.navbar__list');
 const navbar = document.querySelector('.navbar');
+const logo = document.querySelector('.navbar__logo');
 
 burger.addEventListener('click', (e) => {
   burger.classList.toggle('navbar__burger--active');
@@ -24,3 +25,8 @@ window.addEventListener('scroll', function(){
   }
   lastScrollTop = scrollTop;
 });
+
+// Add event listener for logo
+logo.addEventListener('click', function(e){
+  document.location.href = "/";
+})

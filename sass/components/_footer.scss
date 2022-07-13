@@ -56,10 +56,10 @@
   &__copyright {
     & > p {
       font-size: 1.6rem;
-      font-weight: 200;
+      font-weight: 300;
 
       @media only screen and (max-width: $bp-medium) {
-        font-size: 1rem;
+        font-size: 1.5rem;
       }
     }
 
@@ -78,7 +78,7 @@
       font-size: 1.6rem;
 
       @media only screen and (max-width: $bp-medium) {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
       }
 
       &:not(:last-child) {
@@ -97,11 +97,15 @@
     font-size: 1.6rem;
 
     @media only screen and (max-width: $bp-medium) {
-      font-size: 1.4rem;
+      font-size: 1.8rem;
     }
   }
 
   &__link {
     margin-bottom: 0.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-bottom: 1rem;
+    }
   }
 }

@@ -5,9 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Robyn Leah Nalty</title>
   <script defer src="js/script.js"></script>
@@ -15,9 +17,11 @@
 <body>
   <header class="header">
     <nav class="navbar">
-
       <div class="navbar__logo">
-        <a href="index.html"><img class="navbar__logo-img" src="img/logo-galaxy.png" alt="Robyn logo"></a>
+        <img class="navbar__logo-img" src="img/logo-galaxy.png" alt="Robyn logo">
+        <div class="navbar__logo-text">
+          Robyn<br>Leah Nalty
+        </div>
       </div>
 
       <ul class="navbar__list">
@@ -87,7 +91,55 @@
         <h3 class="sub-heading"><span class="background background--seashell">Personal experience</span></h3>
         <p><span class="background background--seashell">I have my own experience of positive birth in the hospital, of rebirth at home in a birthing pool and full term breastfeeding for 5.5 years. Extensively experienced with babywearing, breastfeeding, bed sharing, gentle parenting and home educating. I also bring with me the experience of early birth/ late miscarriage and navigating grief and anxiety.</span></p>
       </div>
-      
+    </section>
+    <section class="section">
+      <h3 class="sub-heading underline underline--apricot">Some Testimonials:</h3>
+      <div class="carousel">
+        <input type="radio" id="carousel-1" name="carousel[]" checked>
+        <input type="radio" id="carousel-2" name="carousel[]">
+        <input type="radio" id="carousel-3" name="carousel[]">
+        <input type="radio" id="carousel-4" name="carousel[]">
+        <ul class="carousel__items">
+          <li class="carousel__item">
+            <div class="carousel__quote">
+              Robyn is nothing short of fantastic - she helped me in the first 4 weeks of motherhood and I can honestly say I would not be the mum I am now if not for her! Her knowledge of all things baby is vast, including breastfeeding and baby wearing, and she's able to impart in a very unobtrusive way - empowering you to make your own decisions and have a far better understanding of your baby.
+            </div>
+          </li>
+          <li class="carousel__item">
+            <div class="carousel__quote">
+              Robyn's help has been great. She's knowledgeable and professional. Her support during a critical moment of my breastfeeding journey has been very helpful. Tailored and caring approach. Thank you Robyn for your support.
+            </div>
+          </li>
+          <li class="carousel__item">
+            <div class="carousel__quote">
+              Robyn’s love and passion started to work for us right after the first phone call.We got lots of help with the latching, positioning and overcoming the nipple confusion and during the course of our home visit lots of useful information given in a very warm and kind way.I totally recommend getting in touch with this lovely Sister!
+            </div>
+          </li>
+          <li class="carousel__item">
+            <div class="carousel__quote">
+              Robyn was fantastic - so knowledgeable and compassionate, and really practical too. She advised us before the birth as well, which was extremely useful. I would definitely recommend her. 
+            </div>
+          </li>
+        </ul>
+        <div class="carousel__prev">
+          <label for="carousel-1"></label>
+          <label for="carousel-2"></label>
+          <label for="carousel-3"></label>
+          <label for="carousel-4"></label>
+        </div>
+        <div class="carousel__next">
+          <label for="carousel-1"></label>
+          <label for="carousel-2"></label>
+          <label for="carousel-3"></label>
+          <label for="carousel-4"></label>
+        </div>
+        <div class="carousel__nav">
+          <label for="carousel-1"></label>
+          <label for="carousel-2"></label>
+          <label for="carousel-3"></label>
+          <label for="carousel-4"></label>
+        </div>
+      </div>
     </section>
 
     <section id="faq" class="section">
@@ -113,8 +165,8 @@
     <div class="footer__socials">
       <h4 class="footer__heading">Follow me <br>on socials:</h4>
       <div class="footer__socials__icons">
-        <a href="#" class="fa fa-4x fa-instagram social-icon"></a>
-        <a href="#" class="fa fa-4x fa-facebook social-icon"></a>
+        <a href="https://www.instagram.com/robynleahn/" class="fa fa-4x fa-instagram social-icon"></a>
+        <a href="https://www.facebook.com/robynleahn/" class="fa fa-4x fa-facebook social-icon"></a>
       </div>
     </div>
     <div class="footer__contact">

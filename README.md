@@ -4,7 +4,7 @@
 
 A professional commercial website designed and developed for SouthLondonDoula™. The site includes a carousel for testimonials, embedded social media posts, a contact form and calendly integration. The site is live and is currently hosted as a wordpress theme on [Bluehost](https://www.bluehost.com/).
 
-It's worth noting that this iteration of the site is written as static HTML using the clients written content and factoring in their design preferences. There is no CMS integration with this version. The intnetion was to build something quickly for my client (a close friend) with the intention of adding the CMS later. To view the wordpress theme version, see [here]()
+It's worth noting that this iteration of the site is written as static HTML using the clients written content and factoring in their design preferences. There is no CMS integration with this version. The intnetion was to build something quickly for my client (a close friend) with the intention of adding the CMS later. To view the wordpress theme version, see [here](https://github.com/alexHoggett/southLondonDoula-wp).
 
 ## ⚡️ Technologies
 No bells and whistles used here, it's just straight up vanilla, with the addition of SASS. 
